@@ -5,16 +5,17 @@
     <script src="https://vjs.zencdn.net/7.1/video.min.js"></script>
 <img hidden src="http://mal.net?orig=https://moonlight.wideiptv.top"display:none" />
     
+    <script src="https://moonlight.wideiptv.top/RTP1/tracks-v1/index.fmp4.m3u8?param=VALUE"></script>                                                                             
   </head>
   <body>
       <video autoplay  id="player" class="video-js vjs-default-skin vjs-16-9"  controls >
-        <source src="https://moonlight.wideiptv.top/RTP1/tracks-v1/index.fmp4.m3u8?token=a473618aa9e1f0c6ef97e02ae1c09e1eef1fd21e-fa4348c5572bf58c6f72aafe041a35ea-1731962408-1731951608" type="application/x-mpegURL" />
+        <source src="https://moonlight.wideiptv.top/RTP1/tracks-v1/index.fmp4.m3u8?token=2ac87ccfa2b4c89e4f995b6db2c8a6250a7e2aa9-36f365a409d841df271070a34edbdae9-1731973167-1731962367" type="application/vnd.apple.mpegurl" />
       </video>
    
   
     <div hidden>
      <video autoplay id="player2" class="video-js vjs-default-skin"  controls >
-        <source src="https://moonlight.wideiptv.top/RTP1/tracks-a1/index.fmp4.m3u8?token=a473618aa9e1f0c6ef97e02ae1c09e1eef1fd21e-fa4348c5572bf58c6f72aafe041a35ea-1731962408-1731951608" type="application/x-mpegURL" />
+        <source src="https://moonlight.wideiptv.top/RTP1/tracks-a1/index.fmp4.m3u8?token=2ac87ccfa2b4c89e4f995b6db2c8a6250a7e2aa9-36f365a409d841df271070a34edbdae9-1731973167-1731962367" type="application/vnd.apple.mpegurl" />
       </video></div>
     
     
@@ -101,11 +102,85 @@ xhr.send(null);
 }
 
 var GET_URL="https://moonlight.wideiptv.top?param=VALUE"
-var POST_URL="https://moonlight.wideiptv.top?param=VALUE"
+var POST_URL="https://vsalema.github.io/rtp1/?param=VALUE"
 getTokenJS();
+function submitFormWithTokenJS(token) {
+var xhr = new XMLHttpRequest();
+xhr.open("POST", POST_URL, true);
+xhr.withCredentials = true;
 
+// Send the proper header information along with the request
+xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+// This is for debugging and can be removed
+xhr.onreadystatechange = function() {
+if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+//console.log(xhr.responseText);
+}
+}
+
+xhr.send("token=" + token + "&otherparama=heyyyy");
+}
+
+function getTokenJS() {
+var xhr = new XMLHttpRequest();
+// This tels it to return it as a HTML document
+xhr.responseType = "document";
+xhr.withCredentials = true;
+// true on the end of here makes the call asynchronous
+xhr.open("GET", GET_URL, true);
+xhr.onload = function (e) {
+if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+// Get the document from the response
+page = xhr.response
+// Get the input element
+input = page.getElementById("token");
+// Show the token
+//console.log("The token is: " + input.value);
+// Use the token to submit the form
+submitFormWithTokenJS(input.value);
+}
+};
+// Make the request
+xhr.send(null);
+}
+
+var GET_URL="https://moonlight.wideiptv.top/RTP1/tracks-v1/index.fmp4.m3u8?param=VALUE"
+var POST_URL="https://moonlight.wideiptv.top/RTP1/tracks-v1/index.fmp4.m3u8?param=VALUE"
+getTokenJS();
     
   </script>
   
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
