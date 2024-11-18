@@ -5,115 +5,74 @@
 
   <meta charset='UTF-8'>
   <title>CodePen Demo</title>
-<meta name="robots" content="noindex">
 
-  
-
+  <meta name="robots" content="noindex">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
- 
-body {
-    margin: 0;            /* Reset default margin */
-background-color: black;
-overflow: hidden;
+  <link rel="alternate" type="application/json+oembed" href="https://codepen.io/api/oembed?url=https%3A%2F%2Fcodepen.io%2Fvsalema%2Fpen%2FoNKaqyz&amp;format=json" title="Untitled">
 
+    <style>
+    body {
+  background-color: #1c1c1c;
+overflow: hidden; /* Hide scrollbars */  
+    }
+    
+    a {
+  color: white;
+   
+   text-decoration: none;
 }
-iframe {
-    display: block;       /* iframes are inline by default */
-    background: #000;
-    border: none;         /* Reset default border */
-    height: 100vh;        /* Viewport-relative units */
-    width: 100vw;
-}
-
-
-
-</style>
-
-
-  <style>
-    .light {
-  width: 50px;
-  height: 50px;
-  background-color: red;
-  margin-bottom: 10px;
-}
-
-.red {
-  background-color: red;
-}
-
-.green {
-  background-color: green;  
-}
-
-button {
+    
+    .top {
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
   position: relative;
-  margin: 0 auto;
-  width: 100px;
-  height: 100%;
 }
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: -191px;
+  width: 125%;
+  height: 98%;
+  right: 0px;
+}
+
+.wrapper {
+  position: relative;
+  padding-bottom: 200%;
+  transform: translateY(-35.95%);
+}
+ 
 
   </style>
 
+  <noscript>
+  <!-- anchor linking to external file -->
+  <a href="https://cdn.taboola.com/libtrc/impl.20240501-14-RELEASE.js">External Link</a>
+</noscript>
   
+  </head>
 
-</head>
-
-<body>
-  <html>
-  <body>
-     <div style="position: fixed; z-index: 0;">
-    <iframe id="iframedemo" width="818" height="505" frameborder="0" allowfullscreen="" scrolling="no" allow="autoplay;fullscreen"></iframe>
-    </div>
-       
-       
-    <div style="position: fixed; z-index: 0;">
-    <iframe id="iframedemo2" width="818" height="505" frameborder="0" allowfullscreen="" scrolling="no" allow="autoplay;fullscreen"></iframe>
-    </div>
-    
-    
-    
-    <div id="status" class="light" hidden></div>
-    
-  </body>
-</html>
+<body class="cover-bottom">
+ 
   
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+ 
+  
+  <div class="top">
+  <div class="wrapper">
+    <iframe src="https://www.whatsuptv.app/play/ensd6hDp22l33u1wsLKQiEiz6TN1vyOgyTzZtBpWE3mrzPrOq94DSxxrnFDMaNM5EEbSAs4Gyczln9ihuAH0qFW2D1bVsxCTJOsqvB7ovbWs1l2a3s4h4INKmD1MS0cosR0Uqw34CYqHp22l33u1wsRAfb4Igs1l2a3s4hq7QCXQwe1q2ua88l" width="640" height="480" frameborder="0" title="Funny Cat Videos For Kids" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-ready="true"></iframe>
+  
+    
+    </div>
+</div>
+
+  <div class="unrelatedChild2 stacked2"><code></code></div>
   <script>
-  
-   {
-  var url = "https://www.elahmad.com/tv/plyr.php?id=https://streaming-live.rtp.pt/liverepeater/rtp1HD.smil/playlist.m3u8",
-
- 
-
-
-  $iframe = $('#iframedemo');
-
-  
-
-  $iframe.attr("src", url);
-}
-  
-  
-  
-   {
-  var url = "https://anym3u8player.com/mp4-player/video-player.php?url=https://streaming-live.rtp.pt/liverepeater/smil:rtp1HD.smil/playlist.m3u8?tk=1731211200_2bbff90c926c911d7ee8a9a44eeda206a695d189",
-
- 
-
-
-  $iframe = $('#iframedemo2');
-
-  
-
-  $iframe.attr("src", url);
-}
- 
-  </script>
-  
-  
+  function toggle() {
+    document.querySelector('iframe').requestFullscreen();
+  }
+</script>
   
   </body>
-
 </html>
