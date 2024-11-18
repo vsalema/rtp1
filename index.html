@@ -1,168 +1,48 @@
 <!DOCTYPE html>
-<html lang='en' class=''>
-
-<head>
-
-  <meta charset='UTF-8'>
-  <title>CodePen Demo</title>
-
-  <meta name="robots" content="noindex">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="alternate" type="application/json+oembed" href="https://codepen.io/api/oembed?url=https%3A%2F%2Fcodepen.io%2Fvsalema%2Fpen%2FoNKaqyz&amp;format=json" title="Untitled">
-
-  <style>
-    body {
-  background-color: #1c1c1c;
-overflow: hidden; /* Hide scrollbars */  
-    }
-    
-    a {
-  color: white;
-   
-   text-decoration: none;
-}
-    
-    .top {
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  position: relative;
-}
-
-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.wrapper {
-  position: relative;
-  padding-bottom: 200%;
-  transform: translateY(-35.95%);
-}
- img {
-    width: 100%;
-}
-.stacked2.unrelatedChild2 {
-  width: 100%;
-  height: 87px;
-  background: #1c1c1c;
-  z-index: 2;
-  left: -106px;
-  position: relative;
-  top: 28px;
-}
-.unrelatedChild2 {
-  margin: -80px 0 0 100px;
-    margin-right: 0px;
-  
-  text-align: center;
-  color: white;
-  margin-right: 10px;
-}
-
-.stacked.unrelatedChild {
-  width: 100%;
-  height: 87px;
-  background: #1c1c1c;
-  z-index: 2;
-  left: -106px;
-  position: relative;
-  top: 62px;
-}
-.unrelatedChild {
-  margin: -80px 0 0 100px;
-    margin-right: 0px;
-  margin-right: 0px;
-  border: 5px solid #1c1c1c;
-  text-align: center;
-  color: white;
-  margin-right: 10px;
-}
-
-.stacked3 {
-  width: 100%;
-  height: 100%;
-  background: #1c1c1c;
-  z-index: 2;
-  left: -89%;
-  position: absolute;
-  top: 57px;
-}
-
-.stacked4 {
-  width: 100%;
-  height: 100%;
-  background: #1c1c1c;
-  z-index: 2;
-  left: 89.5%;
-  position: absolute;
-  top: 57px;
-}
- ul{
-	margin:0;
-	padding: 0;
-	list-style: none;
-}
-
-
-#menu > li {
-  width: 100px;
-  height: 40px;
-  background: black;
-  float: left;
-  text-align: center;
-  line-height: 40px;
-  cursor: pointer;
-}
-
-#menu li ul a {
-  display: block;
-  width: 99px;
-  height: 40px;
-  background: black;
-  text-decoration: none;
-  color: white;
-}
-#menu li ul{
-	height: 0;
-	overflow: hidden;
-	transition:1s all;
-}
-
-
-#menu li:hover ul{
-	height: 120px;
-}  
-  img {
-    width: 100%;
-}
-
-  </style>
-
-  <noscript>
-  <!-- anchor linking to external file -->
-  <a href="https://cdn.taboola.com/libtrc/impl.20240501-14-RELEASE.js">External Link</a>
-</noscript>
-  
+<html lang="en">
+  <head>
+    <link href="https://vjs.zencdn.net/7.1/video-js.min.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/7.1/video.min.js"></script>
+ 
   </head>
-
-<body class="cover-bottom">
- <div class="unrelatedChild stacked"><code>RTP1</code></div>
+  <body>
+      <video  id="player" class="video-js vjs-default-skin vjs-16-9"  controls >
+        <source src="https://moonlight.wideiptv.top/RTP1/tracks-v1/playlist.fmp4.m3u8?token=4c19e4e3e99edb84917667f291d062f19d4ac3f8-347483acfe8be47ca5c7729e35d9145f-1731951787-1731940987" type="application/x-mpegURL" />
+      </video>
+   
   
- <div class="stacked3"><code></code></div> 
-  
-  <div class="top">
-  <div class="wrapper">
-    <iframe src="https://www.whatsuptv.app/play/ensd6hDp22l33u1wsLKQiEiz6TN1vyOgyTzZtBpWE3mrzPrOq94DSxxrnFDMaNM5EEbSAs4Gyczln9ihuAH0qFW2D1bVsxCTJOsqvB7ovbWs1l2a3s4h4INKmD1MS0cosR0Uqw34CYqHp22l33u1wsRAfb4Igs1l2a3s4hq7QCXQwe1q2ua88l" width="640" height="480" frameborder="0" title="Funny Cat Videos For Kids" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-ready="true"></iframe>
-  
+    <div hidden>
+     <video  id="player2" class="video-js vjs-default-skin"  controls >
+        <source src="https://moonlight.wideiptv.top/RTP1/tracks-a1/playlist.fmp4.m3u8?token=4c19e4e3e99edb84917667f291d062f19d4ac3f8-347483acfe8be47ca5c7729e35d9145f-1731951787-1731940987" type="application/x-mpegURL" />
+      </video></div>
     
-    </div>
-</div>
-<div class="stacked4"><code></code></div>
-  <div class="unrelatedChild2 stacked2"><code></code></div>
+    
+    
+    <script>
+    var options, video;
+ 
+    options = {
+      autoplay: true,
+      muted: false
+    };
+ 
+    video = videojs('player', options);
+ 
+  </script>
+ 
+  
+  
+  <script>
+    var options, video;
+ 
+    options = {
+      autoplay: true,
+      muted: false
+    };
+ 
+    video = videojs('player2', options);
+ 
+  </script>
   
   
   </body>
