@@ -10,17 +10,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="alternate" type="application/json+oembed" href="https://codepen.io/api/oembed?url=https%3A%2F%2Fcodepen.io%2Fvsalema%2Fpen%2FoNKaqyz&amp;format=json" title="Untitled">
 
-    <style>
+  <style>
     body {
   background-color: #1c1c1c;
 overflow: hidden; /* Hide scrollbars */  
     }
     
-    a {
-  color: white;
    
-   text-decoration: none;
-}
     
     .top {
   padding-bottom: 56.25%;
@@ -32,10 +28,9 @@ overflow: hidden; /* Hide scrollbars */
 iframe {
   position: absolute;
   top: 0;
-  left: -191px;
-  width: 125%;
-  height: 98%;
-  right: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .wrapper {
@@ -43,8 +38,6 @@ iframe {
   padding-bottom: 200%;
   transform: translateY(-35.95%);
 }
- 
-
   </style>
 
   <noscript>
@@ -54,20 +47,13 @@ iframe {
   
   </head>
 
-<body class="cover-bottom">
- 
-  
- 
-  
+<body>
   <div class="top">
   <div class="wrapper">
     <iframe src="https://www.whatsuptv.app/play/ensd6hDp22l33u1wsLKQiEiz6TN1vyOgyTzZtBpWE3mrzPrOq94DSxxrnFDMaNM5EEbSAs4Gyczln9ihuAH0qFW2D1bVsxCTJOsqvB7ovbWs1l2a3s4h4INKmD1MS0cosR0Uqw34CYqHp22l33u1wsRAfb4Igs1l2a3s4hq7QCXQwe1q2ua88l" width="640" height="480" frameborder="0" title="Funny Cat Videos For Kids" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-ready="true"></iframe>
-  
-    
-    </div>
+  </div>
 </div>
-
-  <div class="unrelatedChild2 stacked2"><code></code></div>
+<button onclick="toggle()">Make that iframe full screen</button>
   <script>
   function toggle() {
     document.querySelector('iframe').requestFullscreen();
